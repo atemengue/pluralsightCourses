@@ -156,17 +156,36 @@
 
 @media (min-width: 992px) {
   .s4_about_grid {
+    grid-template-columns: repeat(2, 1fr);
+
     grid-template-areas:
-      'hd-about hd-about hd-about'
-      'txt-about txt-about img-selfportrait'
-      'txt-about txt-about img-selfportrait';
+      'hd-about hd-about'
+      'txt-about img-selfportrait'
+      'txt-about img-selfportrait';
   }
 
   .img-selfportrait {
-    grid-column: 3 / 5;
+    grid-column: 2 /3;
   }
 }
 /* ------- s5_prints ----------*/
+
+.my-thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  row-gap: 10px;
+  column-gap: 10px;
+  justify-items: center;
+}
+
+.my-thumbs img {
+  display: block;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.my-thumbs .my-bk-image {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
 /* ------- s6_paintings ----------*/
 .painting-1 {
   background: url(../img/paintings-img/1920px-P1150002_Cognacq-Jay_Rembrandt_anesse_de_Balaam_rwk.jpg);
